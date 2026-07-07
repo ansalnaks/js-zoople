@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Todo CRUD</title>
+</head>
+<body>
+
+    <input type="text" id="task" placeholder="Enter Task">
+    <button onclick="handleAddTask()" id="btn">Add Task</button>
+
+    <ul id="list"></ul>
+
+    <script>
+        let todo = [];
+        let editIndex = -1;
+
+        
+        function handleAddTask() {
+            let input = document.getElementById("task");
+            let task = input.value.trim();
+            if (task!== "") {
+                if (editIndex === -1) {
+                    todo.push(task);    // Add
+                } else {
+                    todo[editIndex] = task;   // Update
+                    editIndex = -1;
+                    document.getElementById("btn").innerText = "Add Task";
+                }
+                input.value = "";
+                displayTasks();
+            }
+        }
+
+    
+        function displayTasks() {
+            let output = "";
+            todo.map((task, index) => {
+                output += `
+                    <li>
+                        ${task}
+                        <button onclick="handleEdit(${index})"> Edit</button>
+                        <button onclick="handleDelete(${index})"> Delete</button>
+                    </li>
+                `;
+            });
+            document.getElementById("list").innerHTML = output;
+        }
+
+        function handleDelete(index) {
+            todo.splice(index, 1);
+            displayTasks();
+        }
+
+       
+        function handleEdit(index) {
+            editIndex = index;
+            document.getElementById("task").value = todo[index];
+            document.getElementById("btn").innerText = "Update Task";
+        }
+    </script>
+
+</body>
+</html>

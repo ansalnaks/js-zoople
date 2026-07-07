@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [12, 35, 1, 10, 34, 1];
+
+        let largest = -Infinity;
+        let secondLargest = -Infinity;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > largest) {
+                secondLargest = largest;
+                largest = arr[i];
+            } else if (arr[i] > secondLargest && arr[i] !== largest) {
+                secondLargest = arr[i];
+            }
+        }
+
+        console.log("Second Largest:", secondLargest);
+
+
+
+
+        let arr2 = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        let sum = 0;
+        for (let i = 0; i < arr2.length; i++) {
+            for (let j = 0; j < arr2[i].length; j++) {
+                sum += arr2[i][j];
+            }
+        }
+        console.log("Sum:", sum);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+
+        let age = [12, 45, 77]
+        let fruits = ['apple', 'banana', 'orange', 'kiwi']
+
+        let numbers = [11, 22, 33, 44, 5]
+
+        console.log("length", numbers.length);
+
+        console.log(fruits[2]);
+        console.log("fruits", fruits);
+
+
+        let newnumbers = numbers.slice(1, 3)
+        console.log("new array", newnumbers);
+
+        let newarray = fruits.slice(1, 2)
+        console.log("new", newarray);
+
+       fruits.splice(1, 3, 'jj','jhgf','hjkl')
+        console.log(fruits);
+
+        fruits.push('grape','mm');
+        console.log(fruits);
+        // fruits: ['apple', 'banana', 'orange','grape']
+        fruits.pop();
+        console.log(fruits);
+        // lastFruit: 'grape', fruits: ['apple', 'banana', 'orange']
+
+        fruits.unshift('kiwi');
+        console.log(fruits);
+        // fruits: ['kiwi', 'apple', 'banana', 'orange']
+        fruits.shift();
+        // firstFruit: 'kiwi', fruits: ['apple', 'banana', 'orange']
+
+
+
+        let slicedFruits = fruits.slice(1, 2);
+        // slicedFruits: ['orange'], fruits: ['apple', 'orange']
+
+        console.log("SLICE", slicedFruits);
+
+
+
+        fruits.splice(0, 3, 'mango', 'kiwi');
+        console.log("spliceeg", fruits);
+        fruits.splice(1, 1);
+        //fruits =[mango]
+        // [mango]
+
+        let bananaIndex = fruits.indexOf('banana');
+        // bananaIndex: 1
+
+        let moreFruits = ['grape', 'watermelon'];
+        let combinedFruits = fruits.concat(moreFruits);
+        console.log("combinedFruits", combinedFruits);
+
+        // combinedFruits: ['apple', 'orange', 'grape', 'watermelon']
+
+        let filteredFruits = fruits.filter(fruit => fruit !== 'apple');
+        console.log("ll",filteredFruits);
+
+        let hasApple = fruits.includes('apple');
+        console.log("hasApple", hasApple);
+        // hasApple: true
+        fruits.sort();
+        // fruits: ['apple', 'orange']
+
+        
+
+        let fruitData = [//fruitData[0].id
+            {
+                id: 1,
+                fruit: "Orange",
+                size: "Medium",
+                color: "Orange"
+            },
+            {
+                id: 2,
+                fruit: "Apple",
+                size: "Medium",
+                color: "Red"
+            },
+            {
+                id: 3,
+                fruit: "mango",
+                size: "Medium",
+                color: "Red"
+            }
+
+        ]
+        let foundFruit = fruitData.find(fruit => fruit.id === 2);
+        document.write(foundFruit)
+        console.log("ghj", foundFruit);
+
+        let foundFruitData = fruitData.find(fruit => fruit !== "apple");
+        console.log("vbnm", fruits)
+        console.log("gfghj", foundFruitData);
+
+        // console.log("foundfruit", foundFruit, foundFruitData);
+        // let fruits = ['apple', 'banana', 'orange'];
+
+        let fruit = fruits.find(frt => frt === "apple")
+        console.log(fruit);//Output: 'apple'
+
+        let array = [8, 9, 3, 2, 5, 12]
+
+        let x = array.reduce(function (accumulator, currentValue) {
+            return accumulator + currentValue;
+        }, 0);
+
+        console.log("ghjk", x);
+
+
+
+
+        let frt = [
+            { id: 1, fruit: "Apple", price: 30 },
+            { id: 2, fruit: "Mango", price: 34 },
+            { id: 3, fruit: "Coconut", price: 45 }
+        ]
+        let fruit1 = frt.find(frtS => frtS.id === 2)
+        console.log(fruit1);//Output: { id: 2, fruit: 'Mango' }
+
+
+        let upp = frt.map((frts, index)=> {
+
+            document.write(frts.fruit.toUpperCase());
+            document.write(frts.price);
+
+        })
+        console.log(upp);
+
+
+
+        frt.forEach((ftfg) => {
+            console.log("ghh", ftfg.fruit);
+            console.log("okj", ftfg.price);
+
+        })
+
+        fruits.forEach(function (fruit) {
+            console.log(fruit);
+        })
+
+
+        frt.map((gj) => {
+            console.log("hjjj", gj.fruit);
+
+        })
+        fruits.forEach((fruit) => {
+            console.log(fruit);
+        });
+        // Output: 'apple', 'orange'
+
+        <h1>hello</h1>
+
+
+        let uppercaseFruits = fruits.map(fruit => fruit.toUpperCase());
+        console.log("uppercaseFruits", uppercaseFruits);
+
+        uppercaseFruits: ['APPLE', 'ORANGE']
+
+
+        const frtData = ["apple", "banana", "apple"]
+        const fruit2 = [...new Set(frtData)];//Set is used to remove duplicates
+
+        console.log("BBBBB", fruit2);//Output: ['apple', 'banana']
+
+        let arr = [4, 8, 3, 1, 19, 10, 5, 2]
+        console.log("revERSE", arr.reverse());
+
+        let cars = ["suzuki", "hyundai", "porsche", "skoda", "bmw"]
+        console.log("sorted cars", cars.sort());
+
+        let arr2 = arr.sort()
+        console.log("sort", arr2);
+
+        let sortedArrAsc = arr.sort((a, b) => a - b); // Sort the array numerically in ascending order
+        console.log("sortNumerical", sortedArrAsc);
+
+        let sortedArrDsc = arr.sort((a, b) => b - a); // Sort the array numerically in descending order
+        console.log("sortNumerical", sortedArrDsc);
+
+        // Array destructuring
+        
+        [a, b,c,...rest] = [10, 20,78,89,9,34]
+        console.log(`a: ${a}, b: ${b}`)
+        console.log(c);
+        console.log(rest);
+        
+        
+        
+
+
+
+    
+
+        // let [a,b,...c]=[1,2,4,5,6,7]
+
+        // let arr8 = [4, 19, 1, 7]
+        // for (let i = 0; i < arr8.length; i++) {
+        //     for (let j = 0; j < arr8.length - i - 1; j++) {
+        //         if (arr8[j] > arr8[j + 1]) {
+        //             let temp = arr8[j];
+        //             arr8[j] = arr8[j + 1];
+        //             arr8[j + 1] = temp;
+        //         }
+        //     }
+        // }
+        // document.write("sorted", arr8);
+
+
+        
+
+    </script>
+</body>
+
+
+</html>

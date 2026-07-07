@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 30%;
+            height: 300px;
+            background-color: rgb(65, 218, 218);
+            text-align: center;
+            align-content: center;
+            font-size: 34px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        Hello😀
+    </div> <br>
+
+
+    
+   <button onclick="handleClick()">Click</button> 
+   <p id="res">hello</p>
+   <button id="btn2">click</button>
+
+   <script>
+
+    const text=document.getElementById("box")
+    text.addEventListener("click",function(event){
+        event.target.style.backgroundColor="red";
+        event.target.textContent="Welcome😊"
+    })
+      text.addEventListener("mouseover",function(event){
+        event.target.style.backgroundColor="yellow";
+        event.target.textContent="Hello there🤩"
+    })
+      text.addEventListener("mouseout",function(event){
+        event.target.style.backgroundColor="blue";
+        event.target.textContent="By By🫡"
+    })
+
+    function handleClick(){
+            document.getElementById("res").innerHTML="button clicked"
+    }
+    btn2.addEventListener("click",function(){
+        alert("Clicked");
+    })
+  
+
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Traversal
+        let arr = [10, 20, 30, 40, 50];
+        for (let i = 0; i < arr.length; i++) {
+            console.log("TRAVERSAL", arr[i]);
+        }
+        // document.write("dfgh",`<p>${arr[i]}</p>`);
+
+        //sum
+        let arr1 = [5, 10, 15];
+        let sum = 0;
+        for (let i = 0; i < arr1.length; i++) {
+            sum += arr1[i];    //sum=sum+arr[i]
+        }
+        console.log("Sum:", sum);
+
+
+        //Largest
+        let arr2 = [4, 9, 1, 7];
+        let max = arr2[0];
+        for (let i = 1; i < arr2.length; i++) {
+            if (arr2[i] > max)
+                max = arr2[i];
+        }
+
+        console.log("Largest:", max);
+
+        //Smallest
+        let arr3 = [4, 9, 1, 7];
+        let min = arr3[0];
+        for (let i = 1; i < arr3.length; i++) {
+            if (arr3[i] < min)
+                min = arr3[i];
+        }
+        console.log("Smallest:", min);
+
+       //second largest    
+        arr = [...new Set(arr)]; // Remove duplicates
+        arr.sort((a, b) => b - a);
+
+        console.log("Second Largest:", arr[1]);
+
+
+        //Reverse
+        let arr4 = ['a', 'b', 'c', 'd'];
+        let reversed = [];
+        for (let i = arr4.length - 1; i >= 0; i--) {
+            reversed.push(arr4[i]);
+        }
+        console.log(reversed);
+
+        
+
+        //SEARCH
+        let arr5 = [4, 7, 8]
+        let search = 8
+        console.log(arr5.includes(search));
+
+
+
+        //  even and odd count
+        let arr6 = [1, 2, 3, 4, 5];
+        let even = 0, odd = 0
+        for (let num of arr6) {
+            num % 2 === 0 ? even++ : odd++;
+        }
+        console.log(`Even: ${even}, Odd: ${odd}`);
+
+
+        //Remove duplicates
+        let arr7 = [1, 2, 2, 3, 3, 4];
+        let unique = [...new Set(arr7)];
+        console.log(unique)
+
+        //Sorting
+        let arr8 = [4, 19, 1, 7];
+        for (let i = 0; i < arr8.length; i++) {
+            for (let j = 0; j < arr8.length - i - 1; j++) {
+                if (arr8[j] > arr8[j + 1]) {
+                    let temp = arr8[j];
+                    arr8[j] = arr8[j + 1];
+                    arr8[j + 1] = temp;
+                }
+            }
+        }
+        document.write("Sorted Array: " + arr8);
+
+        // var x = 10;+
+        // console.log(x); // undefined
+
+
+    </script>
+</body>
+
+</html>

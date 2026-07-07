@@ -1,0 +1,74 @@
+
+
+
+// jumb
+// 1.Print Numbers Until User Enters 0 (Using break)
+// 2.Print Only Odd Numbers from 1 to 20 (Using continue)
+// 3.Print numbers 1–50 but skip multiples of 3
+
+
+// let str = "javascript";
+// let char = "a";
+// let count = 0;
+
+// for(let i = 0; i < str.length; i++){
+//     if(str[i] === char){
+//         count++;
+//     }
+// }
+
+// console.log("Occurrence:", count);
+
+// let str = "javascript";
+// let count = 0;
+
+for(let i=0;i<str.length;i++){
+    if("aeiou".includes(str[i])){
+        count++;
+    }
+}
+
+console.log("Vowels:",count);
+
+//longest
+let sentence = "JavaScript is very powerful language";
+
+let words = sentence.split(" ");
+let longest = "";
+
+for(let word of words){
+    if(word.length > longest.length){
+        longest = word;
+    }
+}
+
+console.log("Longest word:", longest);
+
+//anagram
+let str1 = "listen";
+let str2 = "silent";
+
+let s1 = str1.split("").sort().join("");
+let s2 = str2.split("").sort().join("");
+
+if(s1 === s2){
+    console.log("Anagram");
+}else{
+    console.log("Not Anagram");
+}
+
+//count
+let text = "hello";
+let count = {};
+
+for(let char of text){
+    if(count[char]){
+        count[char]++;
+    }else{
+        count[char] = 1;
+    }
+}
+
+console.log(count);
+
+//bd0cff31d68d01043cadefca571cf439

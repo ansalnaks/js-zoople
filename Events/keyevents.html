@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            width: 30%;
+            height: 300px;
+            background-color: rgb(65, 218, 218);
+            text-align: center;
+            align-content: center;
+            font-size: 34px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        🫡
+    </div>
+    <script>
+        const text = document.getElementById("box")
+        text.addEventListener("keydown", function (event) {
+            text.textContent = "😀"
+            text.style.backgroundColor = "red"
+        })
+
+        text.addEventListener("keyup", function (event) {
+            text.textContent = "🤩"
+            text.style.backgroundColor = "yellow"
+        })
+
+
+
+       
+    </script>
+</body>
+
+</html>

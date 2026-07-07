@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo List</title>
+</head>
+<body>
+
+  <input type="text" id="task">
+  <button onclick="addTask()">Add</button>
+
+  <ul id="list">   </ul>
+
+
+  <script>
+
+    let tasks = [];
+
+    function addTask() {
+      let taskInput = document.getElementById("task");
+      tasks.push(taskInput.value);
+      taskInput.value = "";
+      displayTasks();
+    }
+
+    // map() used to display tasks
+    function displayTasks() {
+      let output = "";
+      tasks.map((task) => {
+        output += `
+          <li>
+            ${task}
+            <button onclick="completeTask('${task}')">
+              Completed
+              </button>
+            <button onclick="deleteTask('${task}')">
+              Delete
+            </button>
+          </li>
+        `;
+
+      });
+      document.getElementById("list").innerHTML = output;
+    }
+
+    // filter() used to remove task 
+    // function deleteTask(taskName) {
+    //   tasks = tasks.filter(task => task !== taskName);
+    //   displayTasks();
+    // }
+
+    //splice
+    function deleteTask(taskname){
+      tasks.splice(tasks.indexOf(taskname),1);
+      displayTasks();
+    }
+
+    //mark task as completed
+    function completeTask(taskName) {
+        let listItems = document.querySelectorAll("#list li");
+        listItems.forEach(item => {
+            if (item.textContent.includes(taskName)) {
+            item.style.textDecoration = "line-through";
+            }
+        });
+        }
+
+  </script>
+
+</body>
+</html>

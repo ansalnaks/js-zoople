@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="addItem()">Add</button>
+<button onclick="removeItem()">Remove</button>
+
+<ul id="list">
+</ul>
+
+<script>
+
+function addItem(){
+
+    let li = document.createElement("li");
+
+    li.textContent = "JavaScript";
+
+    li.classList.add("item");
+
+    document.getElementById("list")
+            .appendChild(li);
+}
+
+function removeItem(){
+
+    let items = document.querySelectorAll(".item");
+
+    if(items.length > 0){
+        items[items.length-1].remove();
+    }
+}
+
+</script>
+
+</body>
+</html>

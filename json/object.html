@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3 id="res"></h3>
+    <h3 id="res1"></h3>
+    <h3 id="res2"></h3>
+    <h3 id="res3"></h3>
+<div id="image"></div>
+
+    <script>
+        //obj=>json
+        let person = {
+            name: "meera",
+            age: 20,
+            address: "abc"
+        }
+        console.log(person);
+        document.getElementById('res').innerHTML = JSON.stringify(person)
+
+        //json=>object
+        let data = '{"name":"Ansalna","age":22}';
+        let obj = JSON.parse(data);
+        document.getElementById('res1').innerHTML = obj.age
+        console.log(data);
+
+
+        //fetch
+        // function fetchData() {
+        //     try {
+        //         fetch('data.json')
+        //             .then(res => res.json())
+        //             .then(data => document.getElementById('res2').innerHTML = data.name)
+        //     }
+        //     catch (err) {
+        //         console.log(err)
+        //     }
+        // }
+        // fetchData()
+
+
+        function fetchdata()
+    {
+        try
+        {
+            fetch('data.json')
+            .then(res => res.json())
+            .then(data => document.getElementById("res2").innerHTML=data.name)
+        }
+        catch(error)
+        {
+            console.log("Error");
+        }
+    }
+    fetchdata();
+
+
+        // async function fetchpro() {
+        //     try {
+        //         const response = await fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+        //         const data = await response.json()
+        //         // console.log(data);
+        //         document.getElementById('res3').innerHTML = data.name
+              
+        //         let sprites = data.sprites
+
+        //         let output = ""
+
+        //         for (let key in sprites) {
+
+                 
+        //             if (typeof sprites[key] === "string" && sprites[key] !== null) {
+
+        //                 output += `
+        //                     <div>
+        //                         <p>${key}</p>
+        //                         <img src="${sprites[key]}" width="150">
+        //                     </div>
+        //                 `
+        //             }
+        //         }
+
+        //         document.getElementById("image").innerHTML = output
+        //     } catch (err) {
+        //         console.log(err);
+        //     }
+        // }
+        // fetchpro()
+    </script>
+</body>
+
+</html>

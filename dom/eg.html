@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dark {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">Hello</h1>
+    <h2 id="sub">Welcome</h2>
+    <button onclick="handleclick()">Click</button>
+
+    <h3 class="cls">Programming</h3>
+    <!-- <h3 class="cls">Program</h3> -->
+    <h5 class="hh">Subheading</h5>
+    <h5 class="hh">Subheading2</h5>
+    <p>richoosh</p>
+
+    <button onclick="ChangeTheme()">Click</button>
+
+    <h3 id="crtel">   </h3>
+
+    <p id="para">Hello World</p>
+
+    <div id="box">
+        <p id="para1">Hello</p>
+    </div>
+
+    <script>
+        // dom methods
+
+        let title1 = document.getElementById('title')
+        console.log(title1);
+
+        document.getElementById("title").innerHTML = "meeera"
+        // document.getElementById('title').innerHTML="haii"
+        document.getElementById('title').style.fontSize = "43px"
+
+        const handleclick = () => {
+            document.getElementById('sub').innerHTML = "Hello"
+            document.getElementById('sub').style.color = "blue"
+        }
+
+        document.getElementsByClassName('cls')[0].textContent = "World"
+        document.getElementsByTagName('p')[0].textContent = "mern stack"
+
+        document.querySelector('#sub').style.color = "yellow"
+        document.querySelectorAll('.hh')[1].style.color = "pink"
+
+
+
+
+
+
+        
+
+        // Class manipulation.
+
+        title1.classList.add("red")
+        title1.classList.remove("red")
+
+        document.body.classList.add("dark")
+        const ChangeTheme = () => {
+            document.body.classList.toggle("dark")
+
+            if (document.body.classList.contains("dark")) {
+                console.log("Dark mode enabled");
+            }
+            else {
+                console.log("Light mode enabled"); 
+            }
+        }
+
+        // Creating Elements
+        let heading = document.createElement("h1");
+        console.log(heading);
+        heading.textContent = "MERN Stack";
+
+        document.getElementById("crtel").appendChild(heading)
+
+        // remove
+        document.getElementById("para").remove();
+
+        let parent = document.getElementById("box");
+        let child = document.getElementById("para1");
+
+        parent.removeChild(child);
+
+    </script>
+</body>
+
+</html>

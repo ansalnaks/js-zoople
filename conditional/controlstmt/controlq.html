@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+</head>
+
+<body>
+    <script>
+        // odd or even
+        let num = 7
+        if (num % 2 === 0) { 
+            console.log("even");
+            document.write("even")
+
+        } else {
+            console.log("odd");
+            document.write("odd", "<br>")
+
+        }
+
+
+        let num1 = -3
+        if (num1 > 0) {
+            document.write("positive")
+        }
+        else {
+            document.write("-ve")
+        }
+
+
+        let num3=34
+        if(num%5==0&&num%11==0){
+            console.log("divi");
+            
+        }
+
+        //largest of 2 no
+        // let b=56
+        // let c=89
+
+        // if(c>b){
+
+        // }
+
+
+        // largest of 3 numbers
+
+        let a=10
+        let b=50
+        let c=30
+        let largest=Math.max(a,b,c)
+        console.log("largest is ",largest)
+
+        if(a>=b&&a>=c){
+            //  a
+        }
+        else if(b>=a&& b>=c){
+            //b
+        }
+        else{
+            //c
+        }
+
+
+        let username = "Admin"
+        let password = 12345
+        // let password=12345
+
+        let name = prompt("Enter username")
+        let pass = parseInt( prompt("Enter password"))
+
+        if (name === username && pass === password) {
+            document.write("Login successful")
+            alert("Login successful")
+        }else {
+            document.write("Login failed")
+            alert("Login failed")
+        }
+
+    </script>
+</body>
+
+</html>

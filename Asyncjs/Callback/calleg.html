@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=func, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="res"> </h2>
+    <script>
+       
+        function sum(callback,a,b){  
+            let result=a+b
+            callback(result)
+        }
+        // function display(result){
+        //     console.log(result);
+            
+        // }
+        function displaybrow(result){
+            document.getElementById('res').textContent=result
+        }
+
+         sum(displaybrow,6,7)
+    </script>
+</body>
+</html>

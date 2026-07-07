@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Search</title>
+</head>
+<body>
+    <label for="numArray">Enter numbers separated by commas:</label>
+    <input type="text" id="numArray" placeholder="e.g. 10, 20, 30, 40">
+    <br>
+    <label for="searchNum">Enter a number to search:</label>
+    <input type="number" id="searchNum">
+    <br>
+    <button onclick="searchNumber()">Search</button>
+    <h2 id="result"></h2>
+
+    <script>
+        function searchNumber() {
+            let numArrayStr = document.getElementById("numArray").value;
+            let searchNumber = parseInt(document.getElementById("searchNum").value);
+            let numArray = numArrayStr.split(',').map(num => parseInt(num.trim()));
+            // console.log(numArray);
+            
+            // 10,20,30// 20
+            let found = false
+            for (let i = 0; i < numArray.length; i++) {
+                if (numArray[i] === searchNumber) {
+                    found = true;
+                    break;
+                }
+            }
+            if (found) {
+                document.getElementById("result").innerHTML = `Number ${searchNumber} is in the array.`
+            } else {
+                document.getElementById("result").innerHTML = `Number ${searchNumber} is not in the array.`
+            }
+        }
+    </script>
+</body>
+</html>

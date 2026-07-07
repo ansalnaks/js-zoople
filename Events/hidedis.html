@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="imag" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPCnjtYHR-JqDzR0UHJduZ_pHI9LveRmtYug&s" alt=""><br>
+        <button id="btn">Hide</button>
+
+    <script>
+        const buttonn=document.getElementById('btn')
+        const images=document.getElementById('imag')
+
+        buttonn.addEventListener('click',function(event){
+            if(images.style.visibility==='hidden'){
+                images.style.visibility='visible'
+                buttonn.textContent='Hide'
+            }else{
+                images.style.visibility="hidden"
+                buttonn.textContent="Show"
+            }
+        })
+    </script>
+</body>
+</html>
