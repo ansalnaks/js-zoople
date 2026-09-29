@@ -27,7 +27,7 @@
         let newarray = fruits.slice(1, 2)
         console.log("new", newarray);
 
-       fruits.splice(1, 3, 'jj','jhgf','hjkl')
+       fruits.splice(1, 3, 'jj','jhgf','hjkl','ghjk')
         console.log(fruits);
 
         fruits.push('grape','mm');
@@ -43,20 +43,6 @@
         fruits.shift();
         // firstFruit: 'kiwi', fruits: ['apple', 'banana', 'orange']
 
-
-
-        let slicedFruits = fruits.slice(1, 2);
-        // slicedFruits: ['orange'], fruits: ['apple', 'orange']
-
-        console.log("SLICE", slicedFruits);
-
-
-
-        fruits.splice(0, 3, 'mango', 'kiwi');
-        console.log("spliceeg", fruits);
-        fruits.splice(1, 1);
-        //fruits =[mango]
-        // [mango]
 
         let bananaIndex = fruits.indexOf('banana');
         // bananaIndex: 1
@@ -115,13 +101,21 @@
 
         let array = [8, 9, 3, 2, 5, 12]
 
-        let x = array.reduce(function (accumulator, currentValue) {
-            return accumulator + currentValue;
+        let x = array.reduce(function (acc, cur) {
+            return acc + cur;
         }, 0);
 
         console.log("ghjk", x);
 
+        
+        let arr2 = array.sort()
+        console.log("sort", arr2);
 
+        let sortedArrAsc = array.sort((a, b) => a - b); // Sort the array numerically in ascending order
+        console.log("sortNumerical", sortedArrAsc);
+
+        let sortedArrDsc = array.sort((a, b) => b - a); // Sort the array numerically in descending order
+        console.log("sortNumerical", sortedArrDsc);
 
 
         let frt = [
@@ -139,7 +133,7 @@
             document.write(frts.price);
 
         })
-        console.log(upp);
+      
 
 
 
@@ -155,7 +149,7 @@
 
 
         frt.map((gj) => {
-            console.log("hjjj", gj.fruit);
+            console.log("hjjj", gj.fruit[0]);
 
         })
         fruits.forEach((fruit) => {
@@ -163,7 +157,7 @@
         });
         // Output: 'apple', 'orange'
 
-        <h1>hello</h1>
+        
 
 
         let uppercaseFruits = fruits.map(fruit => fruit.toUpperCase());
@@ -183,14 +177,6 @@
         let cars = ["suzuki", "hyundai", "porsche", "skoda", "bmw"]
         console.log("sorted cars", cars.sort());
 
-        let arr2 = arr.sort()
-        console.log("sort", arr2);
-
-        let sortedArrAsc = arr.sort((a, b) => a - b); // Sort the array numerically in ascending order
-        console.log("sortNumerical", sortedArrAsc);
-
-        let sortedArrDsc = arr.sort((a, b) => b - a); // Sort the array numerically in descending order
-        console.log("sortNumerical", sortedArrDsc);
 
         // Array destructuring
         

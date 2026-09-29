@@ -20,21 +20,27 @@ const pi=3.14
 
 // // primitive
 let m ="14"     //string
+console.log("s",typeof m);
+
 let b=34 // number
+
 let isStudent=true  //boolean
+
 let x
 console.log(x);  //undefined
 let data=null
 console.log(data); //null
+
+let sleg=Symbol('345')
+let bigeg=23456789789n
 // // Symbol,bigint
 
 
 // //non-primitive 
 
 // //array
-let numbers=[2,4,5,6]
-let fruit=['apple','orange']
-console.log(fruit);
+let numbers=[2,4,6,7,8]
+console.log(numbers);
 
 
 // //object
@@ -46,8 +52,6 @@ let student={
 }
 console.log(student);
 
-console.log(student.age);
-console.log(student.rollno);
 
 // // function
 
@@ -58,5 +62,20 @@ greet()
 
 
 
+// conversion
+
+let num1=23
+console.log(String(num1));  //"23"
+
+let num2="hello"
+console.log(num1+num2);
+
+
+
+
+let h="12"
+let p=5
+i=9
+console.log(h-p+i);
 
 

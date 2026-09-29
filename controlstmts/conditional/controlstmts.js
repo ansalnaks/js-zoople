@@ -5,16 +5,16 @@
 
 //conditional
 
-//if(condition){
-//ex
-//}
+// if(condition){
+// ex
+// }
 
 
 
-let age = 28
+let age = 48
 if (age >= 18) {
     console.log("Adult");
-    document.write("adult")
+    document.write("adult"+'<br>')
 }
 
 
@@ -22,8 +22,10 @@ if (age >= 18) {
 let age1 = 8
 if (age1 >= 18) {
     console.log("Adult");
+    document.write("adult"+'<br>')
 } else {
     console.log("minor");
+    document.write("minor"+'<br>')
 }
 
 //ternery ? left(true):right(false)
@@ -36,7 +38,7 @@ console.log(result);
 //if else if
 
 // if () else if( ) else
-let mark = 95
+let mark = 15
 
 if (mark >= 90) {
     console.log("Grade A");
@@ -46,6 +48,10 @@ else if (mark > 60) {
 }
 else if (mark > 30) {
     console.log("Grade C");
+}
+else if(mark >10){
+    console.log('Grade D');
+    
 }
 else {
     console.log("Fail");
@@ -66,13 +72,13 @@ if(day1==="monday"){
 //nested if
 
 let marks = 95
-let attendance = 80
+let attendance = 8
 if (marks >= 50) {
     if (attendance >= 75) {
         console.log("pass");
 
     } else {
-        console.log("Shortage");
+        console.log("FAIL attendance Shortage");
 
     }
 } else {
@@ -84,6 +90,8 @@ switch (day) {
     case "Monday": console.log("Day is monday");
         break;
     case "Tuesday": console.log("Day is tuesday");
+        break;
+    case "Wednesday": console.log("Day is wednesday");
         break;
     default:
         console.log("invalid");

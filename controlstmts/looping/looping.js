@@ -7,9 +7,19 @@ for(let j=1;j<=10;j++){
     console.log(j);
     // document.write(j+'<br>')
     
-}
+}//1 -10
  
 //10-1
+
+
+
+
+
+
+
+
+
+
 
 
 for(let i=1;i<=20;i++){
@@ -44,7 +54,7 @@ i++
 
 
 
-
+// exit controlled loop
 let num=23
 do{
 console.log(num);
@@ -77,7 +87,6 @@ while(num1<=10){
 // }
 // console.log(sum);
 
-
 // // for ...in
 
 let student={
@@ -93,12 +102,10 @@ for(let keys in student ){
 
 
 let numberS=[10,20,30]
-for(let value in numberS){
-    console.log(value);  
+for(let values in numberS){
+    console.log(values,numberS[values]);  
 }
 
-
-
-for(let num of numberS ){
-    console.log(num); 
+for(let nums of numberS ){
+    console.log(nums); 
 }

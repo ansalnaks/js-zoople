@@ -67,7 +67,7 @@ console.log(sumArray([1, 2, 3, 4, 5]));
 
 // length
 let str = "Hello World";
-let count = 0;
+// let count = 0;
 for (let ch of str) {
     count++;
 }
@@ -77,7 +77,7 @@ console.log("Length:", count);
 //string
 //1. Reverse  a string  ,Pallindrome
 
-let name="Annasdf"
+let name="Anna"
 let rev=""
 for(let i=name.length-1;i>=0;i--){
     rev+=name[i]

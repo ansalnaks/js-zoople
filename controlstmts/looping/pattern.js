@@ -2,11 +2,14 @@
 let num=5
 for(let i=1;i<=num;i++){
     for(let j=1;j<=i;j++){
-        document.writeln(j) 
+        document.writeln('*') 
     }
     document.writeln("<br>")
 }
 document.writeln("<br>")
+
+
+
 // //lower pattern
 for(let i=num;i>=1;i--){
     for(let  j=1;j<=i;j++){
@@ -44,7 +47,7 @@ for(let i=1;i<=num;i++){
 let k=1
 for(let i=1;i<=num;i++){
     for(let j=1;j<=i;j++){
-        document.writeln(k+ " ")
+        document.writeln(k + " ")
         k++
     }
     document.writeln("<br>")

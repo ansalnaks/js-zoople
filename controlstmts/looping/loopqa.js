@@ -1,10 +1,10 @@
-// let n = 10;
+
 // let a = 0, b = 1;
 
 // console.log(a);
 // console.log(b);
 
-// for (let i = 3; i <= n; i++) {
+// for (let i = 3; i <= 10; i++) {
 //     let c = a + b;
 //     console.log(c);
 //     a = b;
@@ -34,9 +34,15 @@ for (let i = 1; i <= 10; i++) {
 // reverse
 let num = 123;
 let reverse=0
-for(let i=num;i>0;i=Math.floor(i/10)){
-    let remainder=i%10
+// for(let i=num;i>0;i=Math.floor(i/10)){
+//     let remainder=i%10
+//     reverse=reverse*10+remainder
+// }
+
+for(let i=1;i<=num;i++){
+    let remainder=num%10
     reverse=reverse*10+remainder
+    num=Math.floor(num/10)
 }
 console.log("Reverse =", reverse);
 

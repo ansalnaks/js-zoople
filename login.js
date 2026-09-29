@@ -1,9 +1,9 @@
 let username="admin"
-let password=12345
+let password="12345df"
 // let password=12345
 
 let name=prompt("Enter username")
-let pass=parseInt(prompt("Enter password"))
+let pass=prompt("Enter password")
 
 if(name===username&&pass===password){
     document.write("Login successful")
@@ -31,7 +31,7 @@ if(oper==="+"){
 }else{
     console.log("Invalid"); 
 }
-document.writeln(result)
+document.write(result)
 console.log(result);
 
 

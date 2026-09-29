@@ -10,21 +10,21 @@
 
 let a=10
 let b=20
-console.log("add",a+b);
-console.log("diff",a-b);
-console.log("mul",a*b);
-console.log("div",a/b);
-console.log("mod",a%b);
-console.log("expo",a**b);
+console.log("add",a+b); //30
+console.log("diff",a-b); //-10
+console.log("mul",a*b); //200
+console.log("div",a/b); //0.5
+console.log("mod",a%b); //10
+console.log("expo",a**b); //100000000000000000000
 
 // //assign
 
 let x=6
-console.log("+=",x+=5);  //x=x+5
+console.log("+=",x+=5);  //x=x+5 //6+5=11
 // console.log(x=x+5);
 
 console.log("-=",x-=2);
-console.log(x=x-2);
+// console.log(x=x-2);
 
 console.log("*=",x*=2);
 console.log("/=",x/=2);
@@ -33,14 +33,14 @@ console.log("/=",x/=2);
 let g=10
 let f="10"
 
-console.log("== ",g==f); //true (value)
-console.log("===",g===f); //false (type and value)
-console.log("!==",5!=='5'); //true (type)
-console.log("!=",6!=4); //true (value)
+console.log("== ",g==f); //true
+console.log("===",g===f); //false
+console.log("!==",5!=='5'); //true
+console.log("!=",6!=4);//true
 console.log(">",10>5); //true
 console.log(">=",9>=10); //false
-console.log("<",4<12);
-console.log("<=",4<=3);
+console.log("<",4<12);//true
+console.log("<=",4<=3); //false
 
 
 //logical 
@@ -50,7 +50,7 @@ console.log("&&" ,true&&false);//false
 console.log("||",true||true);  //true
 console.log("||",true||false); //true
 console.log("||",false||false); //false
-console.log("!",true!=false);
+console.log("!",true!=false); //true
 
 let age=20
 let hasId=true
@@ -76,6 +76,14 @@ console.log("--m",--m);  //5
 let user = null;
 let name = user ?? "Guest";
 console.log(name); // "Guest"
+
+
+
+
+
+
+
+
 let score = null;
 console.log(score && 10); // 10 (0 is falsy!)
 console.log(score ?? 10); // 10 (?? only checks null/undefined)

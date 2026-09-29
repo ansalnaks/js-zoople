@@ -12,19 +12,19 @@ console.log(text);
 console.log("Trim",text.trim());
 
 let text2="Welcome to programming"
-let text3="hello,hai,hh" //hello hai hh
+let text3="hello,hai,hh,oo" //hello hai hh
 console.log("Slice",text2.slice(4,8));
 console.log("Substring",text2.substring(0,8));
 
 let str = "JavaScript";
-console.log(str.slice(-4,-1));
+console.log(str.slice(-4));
 console.log(str.substring(-4));
 
 
 console.log("replace",text2.replace("to","to the"));
-console.log("replace all",text3.replaceAll(","   ,   "/"));
+console.log("replace all",text3.replaceAll(","   , " "));
 
-console.log("includes",text2.includes("toy"));
+console.log("includes",text2.includes("o"));
 console.log("charAt",text2.charAt(3));
 console.log("indexof",text2.indexOf("m"));
 console.log("lastindex",text2.lastIndexOf("m"));
@@ -37,8 +37,8 @@ let str2="world"
 console.log("concat",str1.concat(" ",str2));
 console.log("concat",str1+str2);
 
-const fruit="apple, mango"
-console.log("split",fruit.split(","));// [apple,mango]
+const fruit="apple mango"
+console.log("split",fruit.split(" "));// [apple,mango]
 
 
 let str7="hello"
@@ -46,15 +46,15 @@ console.log(str7.repeat(2)); //hello hello
 
 
 let str8="Welcome js"
-console.log(str8.match(/jsh/));
+console.log(str8.match(/jo/));
 console.log(str8.search("dfghjs"));
 
 let words=["hai","hello","jj"]
 console.log(words.join(" "));   //hello  => h e e l l o => o l l e h =>olleh
 
 //template literals
-let name1="meena"
-let role ="developer"
+let name1="meen"
+let role ="devel"
 let title=`${name1} is a ${role}`
 console.log(title);
 

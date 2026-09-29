@@ -10,8 +10,10 @@
 <body>
     <h3 id="res"></h3>
     <h3 id="res1"></h3>
-    <h3 id="res2"></h3>
+    
     <h3 id="res3"></h3>
+    <button onclick="fetchData()">Fetch</button>
+    <h3 id="res2"></h3>
 <div id="image"></div>
 
     <script>
@@ -32,54 +34,41 @@
 
 
         //fetch
-        // function fetchData() {
-        //     try {
-        //         fetch('data.json')
-        //             .then(res => res.json())
-        //             .then(data => document.getElementById('res2').innerHTML = data.name)
-        //     }
-        //     catch (err) {
-        //         console.log(err)
-        //     }
-        // }
+        function fetchData() {
+            try {
+                fetch('data.json')
+                    .then(res => res.json())
+                    .then(data => document.getElementById('res2').innerHTML = data.name)
+            }
+            catch (err) {
+                console.log(err)
+            }
+        }
         // fetchData()
 
 
-        function fetchdata()
-    {
-        try
-        {
-            fetch('data.json')
-            .then(res => res.json())
-            .then(data => document.getElementById("res2").innerHTML=data.name)
-        }
-        catch(error)
-        {
-            console.log("Error");
-        }
-    }
-    fetchdata();
+ 
 
 
-        // async function fetchpro() {
-        //     try {
-        //         const response = await fetch('https://pokeapi.co/api/v2/pokemon/ditto')
-        //         const data = await response.json()
-        //         // console.log(data);
-        //         document.getElementById('res3').innerHTML = data.name
+    //     // async function fetchpro() {
+    //     //     try {
+    //     //         const response = await fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+    //     //         const data = await response.json()
+    //     //         // console.log(data);
+    //     //         document.getElementById('res3').innerHTML = data.name
               
-        //         let sprites = data.sprites
+    //     //         let sprites = data.sprites
 
-        //         let output = ""
+    //     //         let output = ""
 
-        //         for (let key in sprites) {
+    //     //         for (let key in sprites) {
 
                  
-        //             if (typeof sprites[key] === "string" && sprites[key] !== null) {
+    //     //             if (typeof sprites[key] === "string" && sprites[key] !== null) {
 
-        //                 output += `
-        //                     <div>
-        //                         <p>${key}</p>
+    //     //                 output += `
+    //     //                     <div>
+    //     //                         <p>${key}</p>
         //                         <img src="${sprites[key]}" width="150">
         //                     </div>
         //                 `

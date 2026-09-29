@@ -12,13 +12,11 @@ console.log("Hello");
 
 function greet(){  //parameter
     console.log("hello world")
+  
 }
-
+// console.log(a)  //error a is not defined
 
 greet()  //arguments
-
-
-
 
 
 function square(n){  //single parameter
@@ -34,6 +32,9 @@ function add(a,b){  //multiple parameter
 }
 add(2,7)
 
+
+
+
 const mul=(a,b)=>{
     console.log(a+b);
     
@@ -41,10 +42,11 @@ const mul=(a,b)=>{
 mul(5,8)
 
 const sub=(a,b)=>{  //arrow function
-    console.log(a-b);  
+   console.log( a-b);
+   
 }
-let res=sub(5,2)
-console.log(res)
+let res=sub(5,2) //3
+console.log(res)//undefined
 
 
 const div=(a,b)=>{  //arrow function with return
@@ -52,7 +54,7 @@ const div=(a,b)=>{  //arrow function with return
     
 }
 const res1=div(10,2)
-console.log(res1)
+console.log(res1) //5
 
 function test() {
    return 34567
@@ -92,7 +94,7 @@ function sum(...numbers) {
     return total;
 }
 
-console.log(sum(10, 20, 30));
+console.log(sum(10, 20, 30,89));
 
 
 

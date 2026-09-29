@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Search</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding:40px;
+        }
+
+        #search{
+            width:300px;
+            padding:10px;
+            font-size:16px;
+        }
+
+        #suggestions{
+            width:322px;
+            border:1px solid #ccc;
+            border-top:none;
+        }
+
+        .item{
+            padding:10px;
+            cursor:pointer;
+            border-bottom:1px solid #eee;
+        }
+
+        .item:hover{
+            background:#f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Search Place</h2>
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Enter a place..."
+        autocomplete="off"
+    >
+
+    <div id="suggestions"></div>
+
+    <script src="placeapi.js"></script>
+
+</body>
+</html>
