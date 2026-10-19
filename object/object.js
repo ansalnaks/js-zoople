@@ -61,7 +61,7 @@ document.write(JSON.stringify(student))
 // nested object
 let student1 = {
     name: "Ansalna",
-
+  age: 25,
     address: {
         city: "Kochi",
         state: "Kerala"
@@ -73,9 +73,10 @@ console.log(student1.address.city);
 
 
 // object destructuring
-let { name, address: { city } } = student1;
+
+ let{ name, age} = student1;
 console.log(name);
-console.log(city);
+console.log(age);
 
 // spread operator
   let person3 = {
@@ -83,11 +84,15 @@ console.log(city);
       age: 25,
       addres:"fghjkl"
   };
+  let person4 = {
+      city: "Kochi",
+      country: "India"
+  };
 
 let newPerson = {
     ...person3,
-    city: "Kochi",
-    place:"fghjk"
+    ...person4,
+    value:"fghj"
 };
 
 console.log(newPerson);
@@ -118,4 +123,8 @@ if("name" in user){
     console.log("Property exists");
 } else {
     console.log("Property does not exist");
+}
+
+let sc={
+    
 }

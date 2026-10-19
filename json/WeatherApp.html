@@ -87,9 +87,9 @@
                 document.getElementById("humidity").innerText = `💧 Humidity: ${data.main.humidity}%`;
                 document.getElementById("wind").innerText = `🌬️ Wind: ${data.wind.speed} m/s`;
 
-                const iconCode = data.weather[0].icon;
-                document.getElementById("icon").src =
-                    `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+                // const iconCode = data.weather[0].icon;
+                // document.getElementById("icon").src =
+                //     `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
             } catch (error) {
                 console.log(error);

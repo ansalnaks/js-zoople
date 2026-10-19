@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <div id="box">
+    <div id="box" tabindex="0">
         🫡
     </div>
     <script>
@@ -27,15 +27,10 @@
             text.textContent = "😀"
             text.style.backgroundColor = "red"
         })
-
         text.addEventListener("keyup", function (event) {
             text.textContent = "🤩"
             text.style.backgroundColor = "yellow"
-        })
-
-
-
-       
+        })       
     </script>
 </body>
 

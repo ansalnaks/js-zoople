@@ -37,6 +37,8 @@ task1()
 .then(()=>task2())
 .then(()=>task3())
 .then(()=>console.log("completed"))
+.catch(error => console.log(error));
+// finally(()=>console.log("All done"))
 
 
 task1()

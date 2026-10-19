@@ -15,16 +15,12 @@ function greet(){  //parameter
   
 }
 // console.log(a)  //error a is not defined
-
 greet()  //arguments
-
 
 function square(n){  //single parameter
     console.log(n*n)
 }
 square(6)
-
-
 
 function add(a,b){  //multiple parameter
     console.log(a+b);
@@ -32,12 +28,9 @@ function add(a,b){  //multiple parameter
 }
 add(2,7)
 
-
-
-
 const mul=(a,b)=>{
     console.log(a+b);
-    
+   
 }
 mul(5,8)
 
@@ -69,13 +62,13 @@ const sayHello = function () {
 
 sayHello();
 
-const welcomeMsg=function haii(){
-    console.log("Welcome ");
+// const welcomeMsg=function haii(){
+//     console.log("Welcome ");
     
-}
-welcomeMsg()
+// }
+// welcomeMsg()
 
-function welcome(name="meera"){  //default parameter
+function welcome(name="guest"){  //default parameter
     console.log("welcome " +name)
 }
 welcome()

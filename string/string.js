@@ -24,6 +24,9 @@ console.log(str.substring(-4));
 console.log("replace",text2.replace("to","to the"));
 console.log("replace all",text3.replaceAll(","   , " "));
 
+
+
+
 console.log("includes",text2.includes("o"));
 console.log("charAt",text2.charAt(3));
 console.log("indexof",text2.indexOf("m"));
@@ -37,7 +40,7 @@ let str2="world"
 console.log("concat",str1.concat(" ",str2));
 console.log("concat",str1+str2);
 
-const fruit="apple mango"
+const fruit="apple mango OR"
 console.log("split",fruit.split(" "));// [apple,mango]
 
 
@@ -53,7 +56,7 @@ let words=["hai","hello","jj"]
 console.log(words.join(" "));   //hello  => h e e l l o => o l l e h =>olleh
 
 //template literals
-let name1="meen"
+let name1="meenA"
 let role ="devel"
 let title=`${name1} is a ${role}`
 console.log(title);

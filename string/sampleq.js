@@ -80,7 +80,7 @@ console.log("Length:", count);
 let name="Anna"
 let rev=""
 for(let i=name.length-1;i>=0;i--){
-    rev+=name[i]
+    rev+=name[i]//a+=n  an+=n  ann+=a  anna
 }
 if(rev===name){
     console.log("Pallindrome");   
@@ -141,5 +141,12 @@ for (let i = 0; i < word6.length; i++) {
 }
 
 console.log(longest); 
+
+
+
+let names="meena"
+for(let i=0;i<names.length;i++){
+    console.log(names.slice(0,i)+"<br>");
+}
 
 

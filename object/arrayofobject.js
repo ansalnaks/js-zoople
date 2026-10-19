@@ -12,7 +12,7 @@ console.log(students[2].mark);   // 88
 
 
 for (let i = 0; i < students.length; i++) {
-  console.log(students[i].name, students[i].mark);
+  console.log(students[i].name, students[i].mark)
 }
 
 students.push({ id: 4, name: "Arjun", mark: 95 });
@@ -22,9 +22,17 @@ students.pop()
 console.log(students);
 
 
+
+
+
+
+
+
+
+
 //pop unshift shift
 let highMarks = students.filter(student => student.mark > 85);
 console.log(highMarks);
 
-let mapstu=students.map(student=>student.mark)
-console.log(mapstu);
+let maps=students.map(student=>student.mark)
+console.log(maps);

@@ -95,9 +95,10 @@ let student={
 }
 
 for(let keys in student ){
-    // console.log(key);
+    // console.log(keys);
     console.log(keys,student[keys]);
     
+
 }
 
 

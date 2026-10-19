@@ -1,5 +1,8 @@
 console.log("start");
 console.log("Learning JavaScript");
+for(let i=1;i<=100;i++){
+    console.log(i);
+}
 console.log("End");
 
 // Problem with syn

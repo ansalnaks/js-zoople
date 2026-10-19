@@ -6,16 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .dark {
+        /* .dark {
             background: black;
             color: white;
-        }
+        } */
     </style>
 </head>
 
 <body>
     <h1 id="title">Hello</h1>
     <h2 id="sub">Welcome</h2>
+
+
+
+
     <button onclick="handleclick()">Click</button>
 
     <h3 class="cls">Programming</h3>
@@ -46,7 +50,7 @@
 
         const handleclick = () => {
             document.getElementById('sub').innerHTML = "Hello"
-            document.getElementById('sub').style.color = "blue"
+            document.getElementById('sub').style.backgroundColor = "blue"
         }
 
         document.getElementsByClassName('cls')[0].textContent = "World"

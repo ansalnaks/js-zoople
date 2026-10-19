@@ -12,16 +12,13 @@
 
 
   <script>
-
     let tasks = [];
-
     function addTask() {
       let taskInput = document.getElementById("task");
       tasks.push(taskInput.value);
       taskInput.value = "";
       displayTasks();
     }
-
     // map() used to display tasks
     function displayTasks() {
       let output = "";

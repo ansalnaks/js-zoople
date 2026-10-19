@@ -15,6 +15,14 @@ for (let key in scores) {
 }
 console.log(highestStudent);
 console.log(highestScore);
+
+
+
+
+
+
+
+
 // merge 2 objects
 let obj1 = {
     name: "John",

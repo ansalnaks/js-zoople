@@ -1,6 +1,6 @@
 function login(user, callback) {
     setTimeout(() => {
-        console.log("User logged in");
+        console.log("User logged in"+user);
         callback();
     }, 1000);
 }

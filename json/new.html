@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Dog Image</title>
+</head>
+<body>
+
+    <h2>Random Dog Image</h2>
+    <button onclick="getUsers()">Get Dog Image</button>
+
+    <ul id="userList"></ul>
+
+    <script>
+        async function getUsers() {
+            try {
+                const response = await fetch( "https://dog.ceo/api/breeds/image/random" );
+                const users = await response.json();
+                let output = "";
+                output += `<li>
+                   
+                    <img src="${users.message}"
+                         alt="Dog Image"
+                         width="400">
+                </li>`;
+
+                document.getElementById("userList").innerHTML = output;
+
+            } catch (error) {
+                console.log("Error:", error);
+            }
+        }
+    </script>
+
+</body>
+</html>
